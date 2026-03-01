@@ -1,0 +1,196 @@
+\newpage
+\pagestyle{plain}
+\chapter{Судалгааны арга зүй}
+
+\section{SDLC ба Agile аргачлал}
+
+Судалгааны арга зүй нь боловсролын зорилготой мобайл апп хөгжүүлэлтийн төслийн үндэс болох бөгөөд энэ нь програм хангамжийн хөгжүүлэлтийн амьдралын мөчлөгийн (SDLC - Software Development Life Cycle) загварыг дагаж, Agile аргачлалаар хэрэгжинэ.
+
+Agile нь уян хатан, итератив (давталттай) хөгжүүлэлтэд чиглэдэг бөгөөд хэрэглэгчийн санал хүсэлтэд тулгуурлан байнга шинэчлэх боломж олгодог. Энэ арга зүй нь төслийг үе шатаар хувааж, эрсдлийг бууруулж, чанарыг баталгаажуулдаг.
+
+\subsection{Судалгааны үе шатууд}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{0.8cm}|p{4cm}|p{8cm}|}
+\hline
+\textbf{№} & \textbf{Үе шат} & \textbf{Тайлбар} \\
+\hline
+1 & Судалгаа ба шаардлага цуглуулах & SRS баримт бичиг боловсруулах, функционал болон функционал бус шаардлага жагсаах \\
+\hline
+2 & Дизайн & UML диаграммууд (use case, sequence, ERD) зурах, UI/UX дизайн (Figma) хийх \\
+\hline
+3 & Хөгжүүлэлт & Flutter ашиглан код бичих, SQLite-д өгөгдөл хадгалах, Firebase-ээр sync хийх \\
+\hline
+4 & Туршилт & Unit testing, integration testing, usability testing (10-20 хүн) \\
+\hline
+5 & Үнэлгээ ба шинэчлэлт & KPI хэмжих, A/B testing хийх \\
+\hline
+6 & Deployment & Google Play, App Store-д байршуулах, CI/CD ашиглах \\
+\hline
+\end{tabular}
+\caption{Судалгааны арга зүйн үе шатууд}
+\label{tab:sdlc}
+\end{table}
+
+\newpage
+\section{Модулийн дизайн}
+
+Аппыг модульчлагдсан архитектурт суурилан хөгжүүлэх бөгөөд энэ нь хөгжүүлэлтийг илүү үр ашигтай болгоно. Модулиудыг бие даасан байдлаар зохион байгуулж, хоорондын хамаарлыг багасгасан.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+\hline
+\textbf{Модуль} & \textbf{Үүрэг} & \textbf{Технологи} & \textbf{Хамаарал} \\
+\hline
+UI Module & Дэлгэц харуулах & Flutter Widgets & Business Logic \\
+\hline
+Data Module & Өгөгдөл хадгалах & SQLite & Network \\
+\hline
+Business Logic & Логик боловсруулах & Dart & UI, Data \\
+\hline
+Network Module & Онлайн sync & Firebase & Data \\
+\hline
+\end{tabular}
+\caption{Модулийн тохиргоо}
+\label{tab:modules}
+\end{table}
+
+\section{Өгөгдлийн сангийн дизайн}
+
+Өгөгдлийн сан нь relational байх бөгөөд түүхэн өгөгдлийг хадгалахад зориулагдсан. SQLite ашиглах, entity relationships: One-to-many.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{2cm}|p{7cm}|p{4cm}|}
+\hline
+\textbf{Хүснэгт} & \textbf{Багана} & \textbf{Тайлбар} \\
+\hline
+Persons & person\_id (PK), name, birth\_date, death\_date, description, image\_url & Түүхэн хүмүүсийн мэдээлэл \\
+\hline
+Events & event\_id (PK), title, date, description, person\_id (FK) & Үйл явдлууд \\
+\hline
+Maps & map\_id (PK), title, coordinates, event\_id (FK) & Газрын зургийн өгөгдөл \\
+\hline
+Quizzes & quiz\_id (PK), question, answers, correct\_answer & Квиз асуултууд \\
+\hline
+Media & media\_id (PK), type, url, related\_id (FK) & Мультимедиа файлууд \\
+\hline
+\end{tabular}
+\caption{Өгөгдлийн сангийн хүснэгтийн бүтэц}
+\label{tab:database}
+\end{table}
+
+\section{Системийн тохиргоо}
+
+\subsection{Front-End}
+
+Flutter framework ашиглан UI/UX дизайн хийх. Интерфейс нь Material Design эсвэл Cupertino загварыг дагаж, Монгол хэл дээр ажиллана. Оффлайн кэшинг ашиглан хурдан ажиллах.
+
+\subsection{Back-End}
+
+Firebase ашиглан өгөгдөл sync хийх. Голчлон оффлайн тул local logic дээр суурилсан, онлайн болоход шинэ контент татах.
+
+\newpage
+\subsection{Өгөгдлийн сан}
+
+\begin{itemize}
+	\item \textbf{Local:} SQLite
+	\item \textbf{Cloud:} Firestore
+\end{itemize}
+
+\section{Хамгаалалтын дизайн}
+
+Оффлайн апп-д зориулсан аюулгүй байдлын арга хэмжээ:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{9cm}|}
+\hline
+\textbf{Арга хэмжээ} & \textbf{Тайлбар} \\
+\hline
+AES-256 шифрлэлт & Локал өгөгдлийг шифрлэх \\
+\hline
+Биометр/PIN & Local authentication ашиглах \\
+\hline
+Input validation & SQL injection-ээс сэргийлэх \\
+\hline
+Keystore & API key-г аюулгүй хадгалах \\
+\hline
+Permissions & Зөвхөн шаардлагатай зөвшөөрөл авах \\
+\hline
+\end{tabular}
+\caption{Хамгаалалтын арга хэмжээнүүд}
+\label{tab:security}
+\end{table}
+
+\section{UML диаграммууд}
+
+\subsection{Use Case Diagram}
+
+
+Use case diagram нь апп-ын хэрэглэгчийн үйлдлийг (actor → use case) харуулдаг. Апп-д actor (User) болон use case-ууд (Газрын зураг үзэх, Квиз тоглох, Намтар унших) зурдаг.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{use_case.png}
+\caption{Use Case диаграмм}
+\label{fig:usecase}
+\end{figure}
+\newpage
+\subsection{Sequence Diagram}
+
+Sequence diagram нь UML-ийн хэсэг бөгөөд апп-ын объектуудын хоорондын харилцан үйлдлийг цаг хугацааны дарааллаар харуулдаг. Апп-д хэрэглэгч намтар үзэх үед (User → UI → Provider → DB → Firebase) ямар дарааллаар ажиллахыг тодорхойлдог.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{sequence_diagram.png}
+\caption{Sequence диаграмм}
+\label{fig:sequence}
+\end{figure}
+\subsection{System Diagram}
+
+System diagram нь апп-ын ерөнхий архитектурыг (компонент, холбоос, өгөгдлийн урсгал) харуулдаг. Апп-д tier-үүдийг (Client: Flutter UI, Data: SQLite + Firebase) тодорхойлдог.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{system_diagram.png}
+\caption{Системийн диаграмм}
+\label{fig:system}
+\end{figure}
+\newpage
+\subsection{ERD Diagram}
+
+ERD (Entity-Relationship Diagram) нь өгөгдлийн сангийн бүтцийг (entity, attribute, relationship) харуулдаг. Persons (name, description) → Events (title, date) one-to-many холбоос зурдаг.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{er_diagram.png}
+\caption{ERD диаграмм}
+\label{fig:erd}
+\end{figure}
+\section{Хэрэглэгдэх технологи}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Технологи} & \textbf{Хувилбар} & \textbf{Зориулалт} \\
+\hline
+Flutter & 3.38+ & Кросс-платформ UI хөгжүүлэлт \\
+\hline
+Dart & 3.0+ & Програмчлалын хэл \\
+\hline
+SQLite & 3.x & Локал өгөгдлийн сан \\
+\hline
+Firebase & Latest & Cloud sync, authentication \\
+\hline
+Figma & Latest & UI/UX дизайн \\
+\hline
+Git/GitHub & Latest & Version control, CI/CD \\
+\hline
+\end{tabular}
+\caption{Хэрэглэгдэх технологийн жагсаалт}
+\label{tab:tech}
+\end{table}

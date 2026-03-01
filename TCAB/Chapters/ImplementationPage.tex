@@ -1,0 +1,615 @@
+\newpage
+\pagestyle{plain}
+\chapter{Хэрэгжүүлэлт}
+
+Энэхүү бүлэгт 13-р зууны Монголын түүхийг таниулах мобайл аппликейшний хөгжүүлэлтийн үйл явцыг дэлгэрэнгүй тайлбарлана. Аппын эх код нь Flutter фреймворкийн дагуу бүтэцлэгдсэн бөгөөд Dart програмчлалын хэл дээр бичигдсэн. Хэрэгжүүлэлтийг хөгжүүлэлтийн орчин, төслийн бүтэц, өгөгдлийн загварчлал (Model), үйлчилгээний давхарга (Service), төлөвийн удирдлага (State Management), дэлгэцүүд (Screen), дахин ашиглагдах компонент (Component), мөн Firebase интеграцийн гэсэн дэс дарааллаар авч үзнэ.
+
+%% ============================================================
+\section{Хөгжүүлэлтийн орчин ба хэрэгслүүд}
+%% ============================================================
+
+Аппыг хөгжүүлэхэд ашигласан үндсэн орчин, хэрэгслүүдийн мэдээллийг доорх хүснэгтэд харуулав.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{6.5cm}|}
+\hline
+\textbf{Хэрэгсэл} & \textbf{Хувилбар} & \textbf{Зориулалт} \\
+\hline
+Flutter SDK & 3.38+ & Кросс-платформ UI фреймворк \\
+\hline
+Dart & 3.0+ & Програмчлалын хэл \\
+\hline
+Android Studio & Latest & Android эмулятор, APK бүтээх \\
+\hline
+VS Code & Latest & Код засварлагч (Editor) \\
+\hline
+Firebase & Latest & Cloud синхрончлол, баталгаажуулалт \\
+\hline
+Git / GitHub & Latest & Хувилбарын удирдлага (Version Control) \\
+\hline
+Figma & Latest & UI/UX дизайн зурах \\
+\hline
+\end{tabular}
+\caption{Хөгжүүлэлтийн орчин ба хэрэгслүүд}
+\label{tab:dev_tools}
+\end{table}
+
+Төслийн \texttt{pubspec.yaml} тохиргооны файлд зарласан гол хамаарлуудыг (dependencies) дараах хүснэгтэд жагсаав.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{2.5cm}|p{7cm}|}
+\hline
+\textbf{Сан (Package)} & \textbf{Хувилбар} & \textbf{Зориулалт} \\
+\hline
+\texttt{firebase\_core} & \texttt{\^{}2.24.2} & Firebase платформыг эхлүүлэх \\
+\hline
+\texttt{cloud\_firestore} & \texttt{\^{}4.14.0} & Cloud Firestore өгөгдлийн сан \\
+\hline
+\texttt{provider} & \texttt{\^{}6.1.1} & Төлөвийн удирдлага (State Management) \\
+\hline
+\texttt{google\_fonts} & \texttt{\^{}6.1.0} & Google шрифтүүдийг ашиглах \\
+\hline
+\texttt{flutter\_earth\_globe} & \texttt{\^{}2.2.0} & 3D бөмбөрцөг газрын зураг \\
+\hline
+\texttt{lucide\_flutter} & \texttt{\^{}0.563.0} & Нэмэлт дүрс тэмдэгт (Icons) \\
+\hline
+\end{tabular}
+\caption{Төслийн гол хамаарлууд (dependencies)}
+\label{tab:dependencies}
+\end{table}
+
+%% ============================================================
+\section{Төслийн бүтэц}
+%% ============================================================
+
+Flutter төслийн эх код нь \texttt{lib/} хавтас дотор байрлах бөгөөд модульчлагдсан архитектурын дагуу зохион байгуулагдсан. Төслийн бүтцийг доорх хүснэгтэд харуулав.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4cm}|p{9.5cm}|}
+\hline
+\textbf{Хавтас / Файл} & \textbf{Тайлбар} \\
+\hline
+\texttt{lib/main.dart} & Аппын оролтын цэг (Entry Point), Firebase эхлүүлэлт, Provider тохиргоо \\
+\hline
+\texttt{lib/models/} & Өгөгдлийн загвар классууд (Person, Event, Quiz, MapData, Media, EmpireTerritory) \\
+\hline
+\texttt{lib/services/} & Үйлчилгээний давхарга (DataService, InsightService) \\
+\hline
+\texttt{lib/providers/} & Төлөвийн удирдлагын класс (AppProvider) \\
+\hline
+\texttt{lib/screens/} & Дэлгэцийн виджетүүд (7 дэлгэц) \\
+\hline
+\texttt{lib/components/} & Дахин ашиглагдах UI компонентууд (7 компонент) \\
+\hline
+\texttt{assets/data/} & JSON өгөгдлийн файлууд (persons, events, maps, quizzes, culture) \\
+\hline
+\texttt{assets/images/} & Зураг, дүрслэлийн файлууд \\
+\hline
+\texttt{assets/maps/} & Газрын зургийн текстур зургууд \\
+\hline
+\end{tabular}
+\caption{Төслийн хавтасны бүтэц}
+\label{tab:project_structure}
+\end{table}
+
+%% ============================================================
+\section{Аппын оролтын цэг — main.dart}
+%% ============================================================
+
+\texttt{main.dart} файл нь аппын эхлэл цэг (entry point) бөгөөд дараах үндсэн үүргүүдийг гүйцэтгэдэг:
+
+\begin{enumerate}
+	\item \textbf{Firebase эхлүүлэлт:} \texttt{Firebase.initializeApp()} функцээр Firebase платформыг ачааллаж, cloud үйлчилгээнүүдтэй холбогдох бэлтгэл хангана.
+	\item \textbf{Provider бүртгэл:} \texttt{MultiProvider} ашиглан \texttt{InsightService} болон \texttt{AppProvider} гэсэн хоёр \texttt{ChangeNotifier}-ийг бүртгэж, аппын аль ч хэсгээс хандах боломжтой болгоно.
+	\item \textbf{MaterialApp тохиргоо:} Google Fonts (Inter) шрифт, цагаан суурь өнгө бүхий загварчлалыг тодорхойлж, \texttt{HomeScreen}-ийг нүүр дэлгэц болгон тохируулна.
+\end{enumerate}
+
+\texttt{HomeScreen} нь \texttt{StatefulWidget} бөгөөд \texttt{initState()} дотор \texttt{AppProvider.loadAllData()} функцийг дуудаж, бүх оффлайн өгөгдлийг програм эхлэхэд нэг удаа ачааллана. Нүүр дэлгэц нь \texttt{Stack} виджет ашиглан дараах бүрэлдэхүүн хэсгүүдийг давхарлан харуулна:
+
+\begin{itemize}
+	\item \texttt{HeaderCarousel} — Зурагт карусель (auto-scroll)
+	\item \texttt{QuickActions} — Түргэн холбоос товчнууд
+	\item \texttt{HistoryInsightCard} — AI-д суурилсан түүхийн мэдлэгийн карт
+	\item \texttt{FeaturedContent} — Онцлох түүхүүдийн жагсаалт
+	\item \texttt{TopActionBar} — Хайлт ба мэдэгдлийн товчнууд
+	\item \texttt{BottomNav} — Доод навигацийн самбар
+\end{itemize}
+
+%% ============================================================
+\section{Өгөгдлийн загварчлал (Models)}
+%% ============================================================
+
+Аппын өгөгдлийн давхарга нь 6 загвар класс (Model)-аас бүрдэнэ. Загвар бүр нь \texttt{fromMap()} factory constructor ашиглан JSON өгөгдлийг Dart объект болгон хөрвүүлэх, \texttt{toMap()} ашиглан буцаагаар хөрвүүлэх, мөн \texttt{copyWith()} ашиглан хуулбар үүсгэх чадвартай.
+
+\subsection{Person загвар}
+
+Түүхэн хүмүүсийн мэдээллийг хадгалах загвар класс.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{7.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Төрөл} & \textbf{Тайлбар} \\
+\hline
+\texttt{personId} & \texttt{int?} & Хүний дугаар (Primary Key) \\
+\hline
+\texttt{name} & \texttt{String} & Нэр \\
+\hline
+\texttt{birthDate} & \texttt{String?} & Төрсөн огноо \\
+\hline
+\texttt{deathDate} & \texttt{String?} & Нас барсан огноо \\
+\hline
+\texttt{description} & \texttt{String} & Намтар, тайлбар \\
+\hline
+\texttt{imageUrl} & \texttt{String?} & Зургийн зам \\
+\hline
+\end{tabular}
+\caption{Person загварын талбарууд}
+\label{tab:person_model}
+\end{table}
+
+\subsection{Event загвар}
+
+Түүхэн үйл явдлуудыг хадгалах загвар класс. \texttt{personId} талбар нь тухайн үйл явдалтай холбоотой хүнийг зааж өгнө (Foreign Key).
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{7.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Төрөл} & \textbf{Тайлбар} \\
+\hline
+\texttt{eventId} & \texttt{int?} & Үйл явдлын дугаар (PK) \\
+\hline
+\texttt{title} & \texttt{String} & Гарчиг \\
+\hline
+\texttt{date} & \texttt{String} & Огноо \\
+\hline
+\texttt{description} & \texttt{String} & Тайлбар \\
+\hline
+\texttt{personId} & \texttt{int?} & Холбоотой хүний дугаар (FK) \\
+\hline
+\end{tabular}
+\caption{Event загварын талбарууд}
+\label{tab:event_model}
+\end{table}
+
+\subsection{Quiz загвар}
+
+Мэдлэг шалгах квиз асуултуудыг хадгалах загвар. Хариултууд нь JSON форматтай тэмдэгт мөр (String) хэлбэрээр хадгалагдана.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{7.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Төрөл} & \textbf{Тайлбар} \\
+\hline
+\texttt{quizId} & \texttt{int?} & Квизийн дугаар (PK) \\
+\hline
+\texttt{question} & \texttt{String} & Асуултын текст \\
+\hline
+\texttt{answers} & \texttt{String} & Хариултуудын JSON массив \\
+\hline
+\texttt{correctAnswer} & \texttt{int} & Зөв хариултын индекс (0--3) \\
+\hline
+\end{tabular}
+\caption{Quiz загварын талбарууд}
+\label{tab:quiz_model}
+\end{table}
+
+\subsection{MapData загвар}
+
+Газрын зургийн өгөгдлийг хадгалах загвар. Координат, он цаг, өнгө зэрэг мэдээллийг агуулна.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{7.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Төрөл} & \textbf{Тайлбар} \\
+\hline
+\texttt{mapId} & \texttt{int?} & Газрын зургийн дугаар (PK) \\
+\hline
+\texttt{title} & \texttt{String} & Нэр \\
+\hline
+\texttt{coordinates} & \texttt{String} & Координат (өргөрөг, уртраг) \\
+\hline
+\texttt{eventId} & \texttt{int?} & Холбоотой үйл явдлын дугаар (FK) \\
+\hline
+\texttt{description} & \texttt{String?} & Тайлбар \\
+\hline
+\texttt{year} & \texttt{String?} & Он цаг \\
+\hline
+\texttt{color} & \texttt{String?} & Маркерийн өнгө \\
+\hline
+\end{tabular}
+\caption{MapData загварын талбарууд}
+\label{tab:mapdata_model}
+\end{table}
+
+\subsection{Media загвар}
+
+Мультимедиа файлуудын (зураг, видео, аудио) мэдээллийг хадгалах загвар.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{7.5cm}|}
+\hline
+\textbf{Талбар} & \textbf{Төрөл} & \textbf{Тайлбар} \\
+\hline
+\texttt{mediaId} & \texttt{int?} & Медиа дугаар (PK) \\
+\hline
+\texttt{type} & \texttt{String} & Төрөл: image, video, audio \\
+\hline
+\texttt{url} & \texttt{String} & Файлын зам (URL) \\
+\hline
+\texttt{relatedId} & \texttt{int?} & Холбоотой объектийн дугаар (FK) \\
+\hline
+\end{tabular}
+\caption{Media загварын талбарууд}
+\label{tab:media_model}
+\end{table}
+
+\subsection{EmpireTerritory загвар}
+
+Монголын эзэнт гүрний нутаг дэвсгэрийн хил хязгаар болон байлдан дагуулалтын цэгүүдийг статик өгөгдөл хэлбэрээр хадгалах класс. Энэ нь 3D бөмбөрцөг болон 2D газрын зургийн аль алинд ашиглагддаг.
+
+\texttt{EmpireTerritory} класс нь хоёр үндсэн статик өгөгдөл агуулна:
+
+\begin{itemize}
+	\item \texttt{boundaryCoords} — Эзэнт гүрний хил хязгаарын полигон координат (өргөрөг, уртраг хосууд). Зүүн Европоос Зүүн Азийн эргийг хүртэлх 36 координатын цэгээс бүрдэнэ.
+	\item \texttt{markers} — Түүхэн байлдан дагуулалтын 6 гол цэг: Харахорум (нийслэл), Бээжин, Самарканд, Багдад, Москва, Сарай (Алтан Ордны нийслэл).
+\end{itemize}
+
+Маркер бүр нь \texttt{ConquestMarker} классаар тодорхойлогдох бөгөөд нэр (Монгол, Англи), координат, он, үүрэг, тайлбар, өнгө зэрэг мэдээллийг агуулна.
+
+%% ============================================================
+\section{Үйлчилгээний давхарга (Services)}
+%% ============================================================
+
+Үйлчилгээний давхарга нь өгөгдөл ачаалах, боловсруулах логикийг UI-аас салгаж, цэвэр архитектурыг хангах үүрэгтэй. Аппд хоёр үйлчилгээ байна.
+
+\subsection{DataService — Оффлайн өгөгдлийн үйлчилгээ}
+
+\texttt{DataService} нь аппын гол өгөгдлийн үйлчилгээ бөгөөд \textbf{Singleton загвар} (Singleton Pattern)-аар хэрэгжүүлэгдсэн. Энэ нь аппын хаанаас ч ижил нэг жишээ (instance) рүү хандахыг баталгаажуулна.
+
+\textbf{Гол онцлогууд:}
+
+\begin{itemize}
+	\item \textbf{Оффлайн эхлэл (Offline-first):} Бүх өгөгдлийг \texttt{assets/data/} хавтас доторх JSON файлуудаас ачааллана. Сүлжээний холболт шаардлагагүй.
+	\item \textbf{Зэрэгцээ ачаалал:} \texttt{Future.wait()} ашиглан 5 төрлийн өгөгдлийг (persons, events, maps, quizzes, culture) зэрэг ачаалж, хурдыг нэмэгдүүлнэ.
+	\item \textbf{Нэг удаагийн ачаалал:} \texttt{\_isLoaded} туг (flag) ашиглан давтан дуудахад дахин ачаалахгүй байх оновчлол хийгдсэн.
+	\item \textbf{Хайлтын функц:} \texttt{searchPersons()} — нэрээр хайх, \texttt{getEventsForPerson()} — хүнтэй холбоотой үйл явдлуудыг шүүх, \texttt{getPersonById()} — дугаараар хүн олох функцууд.
+\end{itemize}
+
+JSON файл тус бүрийг \texttt{rootBundle.loadString()} ашиглан уншиж, \texttt{json.decode()} функцээр задалсны дараа харгалзах загвар классын \texttt{fromMap()} factory constructor ашиглан Dart объект болгон хөрвүүлнэ. Жишээ нь:
+
+\begin{verbatim}
+Future<void> _loadPersons() async {
+  final jsonStr = await rootBundle
+      .loadString('assets/data/persons.json');
+  final List<dynamic> jsonList = json.decode(jsonStr);
+  _persons = jsonList
+      .map((j) => Person.fromMap(j)).toList();
+}
+\end{verbatim}
+
+\subsection{InsightService — Түүхийн мэдлэгийн үйлчилгээ}
+
+\texttt{InsightService} нь \texttt{ChangeNotifier}-ийг өргөтгөсөн (extends) класс бөгөөд нүүр дэлгэц дээр харуулах түүхийн сонирхолтой мэдээллийг удирдана. Одоогийн хувилбарт 5 ширхэг статик мэдээлэл (insight) тодорхойлогдсон бөгөөд санамсаргүйгээр (random) нэгийг сонгон харуулна. Ирээдүйд Firebase Firestore-оос динамикаар татах боломжтойгоор бэлтгэгдсэн.
+
+Ачаалж буй төлөвийг \texttt{\_isLoading} хувьсагчаар удирдаж, UI-д ачаалж буй анимаци харуулна.
+
+%% ============================================================
+\section{Төлөвийн удирдлага (State Management)}
+%% ============================================================
+
+Аппын төлөвийн удирдлага нь \textbf{Provider} загвар (Provider Pattern) дээр суурилсан. Flutter-ийн албан ёсны санал болгодог төлөвийн удирдлагын шийдэл бөгөөд \texttt{ChangeNotifier} + \texttt{Consumer} хослолоор ажилладаг.
+
+\subsection{AppProvider — Төв төлөвийн удирдлага}
+
+\texttt{AppProvider} нь \texttt{ChangeNotifier}-ийг хольсон (mixin) класс бөгөөд аппын бүх дэлгэцээс хандах боломжтой төв (central) төлөвийн удирдлага юм.
+
+\textbf{Удирдлагын үүргүүд:}
+
+\begin{enumerate}
+	\item \textbf{Навигацийн төлөв:} \texttt{\_selectedNavIndex} — доод навигацийн идэвхтэй цэсийг хянана.
+	\item \textbf{Ачааллын төлөв:} \texttt{\_isLoading} — өгөгдөл ачаалж байгаа эсэхийг UI-д мэдэгдэнэ.
+	\item \textbf{Өгөгдлийн хандалт:} \texttt{DataService}-ийн жишээг агуулж, \texttt{persons}, \texttt{events}, \texttt{quizzes}, \texttt{culture} зэрэг өгөгдлүүдийг \texttt{getter} ашиглан гаднаас хандах боломжтой болгоно.
+	\item \textbf{Бизнесийн логик:} Хүнтэй холбоотой үйл явдал олох, дугаараар хүн олох, нэрээр хайх зэрэг функцуудыг \texttt{DataService} руу шилжүүлнэ.
+\end{enumerate}
+
+Аппын эхлэлд \texttt{loadAllData()} функц дуудагдах бөгөөд дотоод \texttt{DataService.loadAll()}-ийг дуудаж, бүх JSON өгөгдлийг нэг удаа ачааллана. Ачаалал дуусмагц \texttt{notifyListeners()}-ийг дуудаж, бүх \texttt{Consumer} виджетүүдийг шинэчлэнэ.
+
+\begin{verbatim}
+Future<void> loadAllData() async {
+  _isLoading = true;
+  notifyListeners();
+  try {
+    await _dataService.loadAll();
+  } catch (e) {
+    debugPrint('Error loading data: $e');
+  }
+  _isLoading = false;
+  notifyListeners();
+}
+\end{verbatim}
+
+\subsection{Төлөвийн удирдлагын урсгал}
+
+Төлөвийн удирдлагын ажиллагааны урсгалыг товчхон дараах байдлаар тайлбарлана:
+
+\begin{enumerate}
+	\item \texttt{main()} — \texttt{MultiProvider} ашиглан \texttt{AppProvider}, \texttt{InsightService}-ийг бүртгэнэ.
+	\item \texttt{HomeScreen.initState()} — \texttt{AppProvider.loadAllData()} дуудагдана.
+	\item \texttt{AppProvider} — \texttt{DataService.loadAll()} ашиглан JSON өгөгдлүүдийг зэрэг ачааллана.
+	\item Ачаалал дуусмагц \texttt{notifyListeners()} дуудагдаж, бүх \texttt{Consumer} виджетүүд шинэчлэгдэнэ.
+	\item Хэрэглэгч дэлгэцүүд хооронд шилжихэд \texttt{Consumer<AppProvider>} ашиглан шаардлагатай өгөгдлийг авна.
+\end{enumerate}
+
+%% ============================================================
+\section{Дэлгэцүүд (Screens)}
+%% ============================================================
+
+Аппд нийт 7 үндсэн дэлгэц байх бөгөөд тус бүрийг нарийвчлан тайлбарлана.
+
+\subsection{Нүүр дэлгэц — HomeScreen}
+
+Нүүр дэлгэц нь аппыг нээхэд хамгийн түрүүнд харагдах дэлгэц бөгөөд \texttt{Stack} виджетээр давхарлан зохион байгуулагдсан. Үүнд:
+
+\begin{itemize}
+	\item \textbf{HeaderCarousel:} 3 зургийг автоматаар 4 секунд тутамд солигдох карусель хэлбэрээр харуулна. \texttt{PageView.builder} болон \texttt{Timer.periodic} ашигласан.
+	\item \textbf{QuickActions:} 4 түргэн холбоос товч (Хүмүүс, Үйл явдал, Газрын зураг, Quiz) — тус бүр дэлгэцрүү шилжүүлнэ.
+	\item \textbf{HistoryInsightCard:} \texttt{InsightService}-ээс авсан түүхийн сонирхолтой мэдээллийг \texttt{Consumer} ашиглан харуулна.
+	\item \textbf{FeaturedContent:} 3 онцлох түүхийн (Эзэнт гүрний үүсэл, Цэргийн тактик, Нүүдлийн амьдрал) картуудыг жагсаана.
+\end{itemize}
+
+\subsection{Түүхэн хүмүүсийн дэлгэц — PersonsScreen (FR-01, FR-06)}
+
+Энэ дэлгэц нь хоёр горимтой: \textbf{Жагсаалт} ба \textbf{Гэр бүлийн мод}. \texttt{TabController} ашиглан хоёр горимыг солигдоно.
+
+\textbf{Жагсаалт горим:} \texttt{Consumer<AppProvider>} ашиглан бүх хүмүүсийн жагсаалтыг \texttt{ListView.builder}-ээр харуулна. Карт бүрд хүний зураг (аватар), нэр, төрсөн/нас барсан он, холбоотой үйл явдлын тоо харагдана. Карт дээр дарахад \texttt{PersonDetailScreen} руу шилжинэ.
+
+\textbf{Гэр бүлийн мод горим (FR-06):} \texttt{FamilyTreeScreen} нь 3 үеийг (generation) модон бүтцээр харуулна:
+\begin{itemize}
+	\item Үе 1: Чингис хаан ба Бөртэ үжин
+	\item Үе 2: 4 хөвгүүд (Зүчи, Цагадай, Өгөдэй, Тулуй)
+	\item Үе 3: Ач нар (Бат хаан, Мөнх хаан, Хубилай хаан, Хүлэгү хаан)
+\end{itemize}
+
+\texttt{InteractiveViewer} виджет ашиглан том/жижиг болгох, чирэх (pan \& zoom) боломжтой. \texttt{CustomPaint} ашиглан үеүүдийн хоорондын холбоосын шугамыг зурна.
+
+\subsection{Хүний дэлгэрэнгүй дэлгэц — PersonDetailScreen (FR-01)}
+
+Тухайн нэг хүний дэлгэрэнгүй намтрыг харуулах дэлгэц. Аватар зураг, нэр, төрсөн/нас барсан огноо, намтар текст, мөн тухайн хүнтэй холбоотой үйл явдлуудын жагсаалтыг агуулна. \texttt{Consumer<AppProvider>} ашиглан \texttt{getEventsForPerson()} функцээр холбоотой үйл явдлуудыг шүүж харуулна.
+
+\subsection{Цагийн хэлхээс — EventsTimelineScreen (FR-03)}
+
+Бүх түүхэн үйл явдлуудыг огноогоор эрэмбэлж, интерактив цагийн хэлхээс (Timeline) хэлбэрээр харуулна. Цагийн хэлхээсийн зүүн талд өнгөт цэг ба босоо шугам, баруун талд үйл явдлын карт байрлана.
+
+\textbf{Гол техникийн шийдлүүд:}
+\begin{itemize}
+	\item Үйл явдлуудыг \texttt{date} талбараар \texttt{sort()} ашиглан цагийн дарааллаар эрэмбэлнэ.
+	\item \texttt{IntrinsicHeight} — Зүүн шугам ба баруун картын өндрийг нэгтгэнэ.
+	\item Үйл явдал дээр дарахад холбоотой хүний \texttt{PersonDetailScreen}-рүү шилжинэ.
+	\item 6 өнгийн палетт ашиглан картуудыг ялгана.
+\end{itemize}
+
+\subsection{Газрын зургийн дэлгэц — MapScreen (FR-02)}
+
+Газрын зургийн дэлгэц нь аппын хамгийн нарийн төвөгтэй дэлгэц бөгөөд \textbf{3D бөмбөрцөг} (3D Globe) ба \textbf{2D хавтгай газрын зураг} (2D Flat Map) гэсэн хоёр горимтой. Хоёр горимыг \texttt{AnimationController}-тэй crossfade анимацаар солигдоно.
+
+\subsubsection{3D Бөмбөрцөг горим}
+
+\texttt{flutter\_earth\_globe} санг ашиглан бодит дэлхийн бөмбөрцгийг харуулна. Үндсэн тохиргоо:
+
+\begin{itemize}
+	\item Автомат эргэлт (rotationSpeed: 0.02)
+	\item Том/жижиг болгох боломж (zoom: 0.4, min: $-0.5$, max: 3.0)
+	\item Дэлхийн гадаргуугийн текстур зураг (\texttt{earth\_texture.png})
+	\item Одны арын дэвсгэр зураг (\texttt{stars\_bg.jpg})
+	\item Агаар мандлын эффект (atmosphereColor, opacity, thickness)
+\end{itemize}
+
+Бөмбөрцөг ачаалагдсаны дараа дараах элементүүдийг нэмнэ:
+
+\begin{enumerate}
+	\item \textbf{Эзэнт гүрний хил:} \texttt{EmpireTerritory.boundaryCoords} ашиглан 35+ шулуун шугамаар хилийн шугамыг улаан өнгөөр зурна (\texttt{PointConnection}).
+	\item \textbf{Байлдан дагуулалтын маркерууд:} 6 гол хотыг (Харахорум, Бээжин, Самарканд, Багдад, Москва, Сарай) тус тусын өнгөтэй цэг хэлбэрээр тэмдэглэнэ.
+	\item \textbf{Аян замын шугам:} Харахорум (нийслэл)-аас бусад хот руу тасархай шугам (dashed line) зурж, байлдан дагуулалтын чиглэлийг харуулна.
+\end{enumerate}
+
+\subsubsection{2D Хавтгай газрын зураг горим}
+
+\texttt{FlatMapWidget} компонент нь equirectangular проекцийн зарчмаар ажилладаг. $2400\times1200$ пиксел хэмжээтэй зурагт дээр \texttt{CustomPaint} ашиглан эзэнт гүрний хил, Харахорумаас байлдааны чиглэлүүдийг зурж, маркеруудыг интерактив байдлаар байрлуулна. Координатын хувиргалт:
+
+\begin{itemize}
+	\item Уртрагийг X тэнхлэгт хөрвүүлэх: $x = \frac{(\mathrm{lon} + 180)}{360} \times \mathrm{width}$
+	\item Өргөрөгийг Y тэнхлэгт хөрвүүлэх: $y = \frac{(90 - \mathrm{lat})}{180} \times \mathrm{height}$
+\end{itemize}
+
+\texttt{InteractiveViewer} ашиглан хэрэглэгч газрын зургийг чирэх, томруулах (0.4x -- 8.0x) боломжтой. Анхны байрлалд Монголын эзэнт гүрний нутаг дэвсгэрийг төвлөрүүлнэ.
+
+\subsubsection{Газрын зургийн удирдлага}
+
+Дэлгэцийн баруун доод буланд удирдлагын товчнууд байрлана:
+\begin{itemize}
+	\item Эргэлт шинэчлэх (Reset Rotation)
+	\item Эзэнт гүрний хил харуулах/нуух (Toggle Empire)
+	\item Томруулах/Жижигрүүлэх (Zoom In/Out)
+\end{itemize}
+
+Маркер дээр дарахад тухайн хотын дэлгэрэнгүй мэдээлэл (нэр, он, үүрэг, тайлбар) модал цонхоор (bottom sheet) харагдана.
+
+\subsection{Квизийн дэлгэц — QuizScreen (FR-04)}
+
+Мэдлэг шалгах квизийн дэлгэц нь \texttt{StatefulWidget} бөгөөд хэрэглэгчийн хариулт, оноог удирдана.
+
+\textbf{Ажиллагааны алгоритм:}
+\begin{enumerate}
+	\item Квиз эхлэхэд \texttt{AppProvider}-ээс бүх асуултыг авч, санамсаргүйгээр хольж (shuffle) эрэмбэлнэ.
+	\item Асуулт бүрд 4 хариулт (A, B, C, D) харуулагдана. Хариултуудыг JSON тэмдэгт мөрөөс \texttt{json.decode()} ашиглан задална.
+	\item Хэрэглэгч хариулт сонгоход:
+	\begin{itemize}
+		\item Зөв бол ногоон өнгөтэй, $\checkmark$ тэмдэгтэй
+		\item Буруу бол улаан өнгөтэй, $\times$ тэмдэгтэй, зөв хариултыг ногооноор харуулна
+	\end{itemize}
+	\item Дэвшилтийн самбар (Progress Bar) ашиглан хэдэн асуулт хариулсныг хувиар харуулна.
+	\item Бүх асуултад хариулсны дараа үр дүнгийн дэлгэц харуулна:
+	\begin{itemize}
+		\item 80\%+ — ``Маш сайн!'' (🏆)
+		\item 50--79\% — ``Сайн байна!'' (👍)
+		\item 50\%-аас доош — ``Дахин оролдоорой!'' (📚)
+	\end{itemize}
+	\item ``Дахин тоглох'' товч дээр дарахад квизийг шинэчлэн эхлүүлнэ.
+\end{enumerate}
+
+\subsection{Соёлын дэлгэц — CultureScreen (FR-07)}
+
+13-р зууны Монголын соёл, нийгмийн амьдралын мэдээллийг харуулах дэлгэц. \texttt{Consumer<AppProvider>} ашиглан \texttt{culture} жагсаалтыг \texttt{ListView.builder}-ээр харуулна. Карт бүрд иконо, гарчиг, товч тайлбар харагдах бөгөөд дарахад \texttt{\_CultureDetailScreen} руу шилжиж, дэлгэрэнгүй мэдээллийг харуулна.
+
+6 өнгийн палетт болон 6 иконо (landscape, shield, route, temple\_buddhist, edit\_note, restaurant) ашиглан соёлын сэдвүүдийг ялган тэмдэглэнэ.
+
+%% ============================================================
+\section{Дахин ашиглагдах компонентууд (Components)}
+%% ============================================================
+
+Аппын UI-д дахин ашиглагдах 7 компонент \texttt{lib/components/} хавтаст байрлана.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{4.5cm}|p{9cm}|}
+\hline
+\textbf{Компонент} & \textbf{Тайлбар} \\
+\hline
+\texttt{HeaderCarousel} & Нүүр хуудасны зурагт карусель (3 зураг, 4с автомат солилт) \\
+\hline
+\texttt{QuickActions} & 4 түргэн холбоос товч (зураг + текст, навигаци) \\
+\hline
+\texttt{FeaturedContent} & Онцлох түүхүүдийн карт жагсаалт \\
+\hline
+\texttt{BottomNav} & 5 цэстэй доод навигацийн самбар \\
+\hline
+\texttt{FlatMapWidget} & 2D хавтгай газрын зураг (equirectangular проекц) \\
+\hline
+\texttt{PersonNode} & Гэр бүлийн модны хүний зангилаа (анимацтай) \\
+\hline
+\texttt{PersonDetailCard} & Хүний дэлгэрэнгүй мэдээллийн хөвөгч карт \\
+\hline
+\end{tabular}
+\caption{Дахин ашиглагдах компонентуудын жагсаалт}
+\label{tab:components}
+\end{table}
+
+\subsection{BottomNav — Доод навигац}
+
+\texttt{BottomNav} нь аппын бүх дэлгэцрүү шилжих 5 цэстэй навигацийн самбар:
+
+\begin{enumerate}
+	\item Хүмүүс (\texttt{PersonsScreen})
+	\item Үйл явдал (\texttt{EventsTimelineScreen})
+	\item Газрын зураг (\texttt{MapScreen})
+	\item Quiz (\texttt{QuizScreen})
+	\item Соёл (\texttt{CultureScreen})
+\end{enumerate}
+
+Сонгогдсон цэс нь улаан өнгөтэй (\texttt{\#D94B2B}), бусад нь саарал өнгөтэй харагдана. \texttt{Navigator.push()} ашиглан тухайн дэлгэцрүү шилжинэ.
+
+\subsection{PersonNode — Гэр бүлийн модны зангилаа}
+
+\texttt{PersonNode} нь гэр бүлийн модонд ашиглагддаг тойрог хэлбэртэй хүний зангилаа виджет. \texttt{AnimationController} ашиглан дарах үед жижгэрэх анимациар (scale 1.0 $\rightarrow$ 0.92) хэрэглэгчийн хариу үйлдлийг сайжруулна. \texttt{isSelected} параметр ашиглан алтан өнгийн хүрээгээр тэмдэглэнэ.
+
+\subsection{PersonDetailCard — Хөвөгч мэдээллийн карт}
+
+Гэр бүлийн модонд хүний зангилаа дарахад гарч ирэх \texttt{FadeTransition} + \texttt{ScaleTransition} анимацтай хөвөгч карт. Аватар, нэр, он, намтар, түлхүүр үйл явдлуудыг харуулна. Картны гадна дарахад хаагдана.
+
+%% ============================================================
+\section{Firebase интеграци}
+%% ============================================================
+
+Апп нь Firebase платформтой интеграцлагдсан бөгөөд \texttt{firebase\_core} ба \texttt{cloud\_firestore} сангуудыг ашигладаг.
+
+\subsection{Firebase эхлүүлэлт}
+
+\texttt{main()} функцэд \texttt{Firebase.initializeApp()} дуудагдаж, \texttt{firebase\_options.dart} файлд тодорхойлсон тохиргооны дагуу Firebase-тэй холбогдоно. Платформ бүрийн (Android, iOS, Web) тохиргоо \texttt{DefaultFirebaseOptions} class-д автоматаар тохируулагдсан.
+
+\subsection{Cloud Firestore}
+
+Одоогийн хэрэгжүүлэлтэд Firestore-ыг ирээдүйн онлайн синхрончлолд ашиглахаар бэлтгэсэн. \texttt{InsightService} дотор Firestore-оос өгөгдөл татах жишээ код (comment хэлбэрээр) бэлтгэгдсэн. Үндсэн өгөгдлийг одоогоор локал JSON файлуудаас ачааллаж, оффлайн горимд ажилладаг.
+
+\subsection{Ирээдүйн өргөтгөл}
+
+Firebase-ийн дараах боломжуудыг нэмэх боломжтой:
+\begin{itemize}
+	\item \textbf{Cloud Firestore} — Шинэ контент Cloud-оос татаж, локал кэштэй синхрончлох
+	\item \textbf{Firebase Authentication} — Хэрэглэгчийн бүртгэл, нэвтрэлт
+	\item \textbf{Firebase Storage} — Зураг, видео, аудио файлуудыг Cloud-д хадгалах
+	\item \textbf{Firebase Analytics} — Хэрэглэгчийн үйл ажиллагааг хянах
+\end{itemize}
+
+%% ============================================================
+\section{Хэрэглэгчийн интерфейсийн дизайн}
+%% ============================================================
+
+Аппын хэрэглэгчийн интерфейс нь 13-р зууны Монголын түүхийн уур амьсгалыг илэрхийлэх зорилготой тусгай дизайн систем дээр суурилсан.
+
+\subsection{Өнгөний палетт}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|p{7.5cm}|}
+\hline
+\textbf{Нэр} & \textbf{Код} & \textbf{Хэрэглээ} \\
+\hline
+Хүрэн (Brown) & \texttt{\#3B2F2F} & Үндсэн текст, гарчиг \\
+\hline
+Бамбай (Parchment) & \texttt{\#F2DFC3} & Арын дэвсгэр (градиент) \\
+\hline
+Цайвар бамбай & \texttt{\#E8D0A8} & Градиентийн хоёрдогч өнгө \\
+\hline
+Картын цагаан & \texttt{\#FFFBF5} & Картны дэвсгэр \\
+\hline
+Алтан (Gold) & \texttt{\#B8860B} & Хүрээ, онцлох элемент \\
+\hline
+Эзэнт гүрний улаан & \texttt{\#E53935} & Газрын зургийн хил, идэвхтэй элемент \\
+\hline
+\end{tabular}
+\caption{Хэрэглэгчийн интерфейсийн өнгөний палетт}
+\label{tab:color_palette}
+\end{table}
+
+Градиент дэвсгэр нь эртний бамбай цаасны уур амьсгалыг бүтээж, хүрэн болон алтан өнгөнүүд нь Монголын эзэнт гүрний сүр жавхланг илэрхийлнэ.
+
+\subsection{Шрифт ба бичгийн загвар}
+
+Апп нь \texttt{google\_fonts} сангийн \textbf{Inter} шрифтийг ашигладаг. Гарчиг нь 19--24px хэмжээтэй, тод (bold), хүрэн өнгөтэй. Ерөнхий текст нь 12--15px, хагас тунгалаг хүрэн өнгөтэй, мөр хоорондын зай (line height) 1.4--1.6 байна.
+
+\subsection{Анимацууд}
+
+Аппд дараах анимацууд ашиглагдсан:
+\begin{itemize}
+	\item \textbf{HeaderCarousel:} 350мс хугацаатай \texttt{easeInOut} слайд шилжилт
+	\item \textbf{3D/2D газрын зургийн солилт:} 400мс crossfade + scale анимац
+	\item \textbf{PersonNode:} 150мс \texttt{easeInOut} масштабын (scale) анимац
+	\item \textbf{PersonDetailCard:} 320мс \texttt{easeOutBack} масштаб + бүдгэрэх анимац
+	\item \textbf{Маркерийн шилжилт:} 600мс \texttt{transitionDuration} бүхий цэгийн анимац
+	\item \textbf{Байлдааны замын шугам:} 2--3 секунд хугацаатай зурах анимац
+\end{itemize}
+
+%% ============================================================
+\section{Өгөгдлийн урсгалын дүгнэлт}
+%% ============================================================
+
+Аппын өгөгдлийн ерөнхий урсгалыг дараах байдлаар дүгнэж болно:
+
+\begin{enumerate}
+	\item \textbf{Эх үүсвэр:} JSON файлууд (\texttt{assets/data/}) $\rightarrow$ оффлайн, локал
+	\item \textbf{Ачаалал:} \texttt{DataService} (Singleton) $\rightarrow$ \texttt{rootBundle.loadString()} $\rightarrow$ \texttt{json.decode()} $\rightarrow$ Model \texttt{fromMap()}
+	\item \textbf{Хадгалалт:} \texttt{DataService} дотоод жагсаалтууд (\texttt{\_persons}, \texttt{\_events}, гэх мэт)
+	\item \textbf{Хандалт:} \texttt{AppProvider} $\rightarrow$ getter ба шүүх функцууд
+	\item \textbf{Харуулалт:} \texttt{Consumer<AppProvider>} $\rightarrow$ UI Widget-үүд
+	\item \textbf{Ирээдүй:} Firebase Firestore $\rightarrow$ Cloud sync $\rightarrow$ Локал кэш шинэчлэл
+\end{enumerate}
+
+Энэхүү оффлайн эхлэлтэй (offline-first) архитектур нь сүлжээний холболтгүй нөхцөлд ч аппыг бүрэн ажиллах боломжтой болгож, хэрэглэгчийн туршлагыг сайжруулна.

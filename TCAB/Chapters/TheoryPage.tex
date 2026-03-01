@@ -1,0 +1,133 @@
+\setlength{\headheight}{27pt}
+\newpage
+\pagestyle{plain}
+\chapter{Судалгааны сэдвийн онол,\\ өнөөгийн түвшин}
+
+\section{Судалгааны сэдвийн онол}
+
+Судалгааны сэдэв нь боловсролын зорилготой мобайл апп хөгжүүлэлтэд чиглэсэн бөгөөд онолын үндэслэл нь дижитал боловсролын платформ бүтээхэд тулгуурладаг.
+
+\subsection{Дижитал боловсролын онол (e-Learning Theory)}
+
+Өнөөгийн дижитал эринд мобайл апп нь боловсролын мэдлэг түгээх гол хэрэгсэл болсон бөгөөд энэ нь дижитал боловсролын онолд суурилдаг. Энэ онол нь мэдлэгийг интерактив, хүртээмжтэй байдлаар хүргэхэд чиглэдэг бөгөөд constructivism (бүтээгдэхүйн онол)-ын зарчмаар хэрэглэгч өөрөө мэдлэг бүтээх боломж олгодог (жишээ: квиз, газрын зураг ашиглан судлах).
+
+\subsection{Mobile Learning (m-Learning) онол}
+
+Mobile learning онол нь мобайл төхөөрөмжийн давуу талыг (оффлайн ажиллах, интерактив элемент) ашиглаж, суралцагчийг хаана ч, хэзээ ч сурах боломжтой болгодог. Энэ онолын үүднээс апп нь:
+
+\begin{itemize}
+	\item \textbf{Gamification:} Тоглоомын элемент (оноо цуглуулах, шагнал) ашиглан хэрэглэгчийн анхаарлыг татах
+	\item \textbf{Personalization:} Хувийн тохиргоо (түвшин сонгох) хийх
+\end{itemize}
+
+\subsection{Програм хангамжийн хөгжүүлэлтийн онол}
+
+Онолын хүрээнд апп хөгжүүлэлт нь Software Development Life Cycle (SDLC)-ийн загварыг дагадаг:
+
+\begin{enumerate}
+	\item Шаардлага тодорхойлох (SRS)
+	\item Дизайн (UI/UX, өгөгдлийн сан)
+	\item Хөгжүүлэлт
+	\item Туршилт
+	\item Хамгаалалт
+\end{enumerate}
+
+Энэ нь Agile аргачлалаар хэрэгжинэ, учир нь боловсролын апп-д хэрэглэгчийн санал хүсэлтэд тулгуурлан байнга шинэчлэх шаардлагатай.
+
+\subsection{Өгөгдлийн сангийн онол}
+
+Өгөгдлийн сангийн онол нь relational database model (хүснэгтүүдийн хоорондын харилцаа: one-to-many, жишээ: Person → Event) ашиглаж, өгөгдлийг үр дүнтэй хадгалах, авахад чиглэдэг.
+
+\subsection{Аюулгүй байдлын онол}
+
+Аюулгүй байдлын онол нь CIA triad (Confidentiality, Integrity, Availability)-д суурилж, өгөгдлийг шифрлэх, баталгаажуулах арга хэмжээ авна.
+
+\section{Өнөөгийн түвшин}
+
+2025 оны байдлаар мобайл апп хөгжүүлэлт, ялангуяа боловсролын апп-ын түвшин өндөр хөгжсөн бөгөөд кросс-платформ технологи (Flutter, React Native) голлох байр суурь эзэлж байна.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{9cm}|}
+\hline
+\textbf{Чиг хандлага} & \textbf{Тайлбар} \\
+\hline
+Gamification & Retention-ийг 30-40\% нэмэгдүүлдэг (Duolingo, Khan Academy) \\
+\hline
+AI Personalization & Хувийн санал болгох, recommendation system \\
+\hline
+AR/VR элемент & Интерактив туршлага өгөх \\
+\hline
+Оффлайн дэмжлэг & Local DB + cloud sync ашиглах \\
+\hline
+Кросс-платформ & Апп-уудын 30\% Flutter/React Native ашигладаг \\
+\hline
+\end{tabular}
+\caption{Боловсролын апп-ын өнөөгийн чиг хандлага}
+\label{tab:trends}
+\end{table}
+
+Монгол Улсад мобайл апп хөгжүүлэлт өсөн нэмэгдэж байгаа ч боловсролын зорилготой апп-ууд (Ulger, Mongolian Script Apps) цөөн, ихэвчлэн статик контенттэй байгаа тул интерактив апп-ын дутагдал бий.
+
+\section{Flutter Framework}
+
+Flutter нь Google-ийн бүтээсэн кросс-платформ фреймворк бөгөөд нэг код ашиглан Android, iOS, вэб, desktop апп хөгжүүлэх боломж олгодог.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{6cm}|p{7cm}|}
+\hline
+\textbf{Давуу тал} & \textbf{Сул тал} \\
+\hline
+Hot Reload - код өөрчилсөн үед UI шууд шинэчлэгдэх & Native функц (камер) шаардлагатай үед plugin шаардана \\
+\hline
+Widget-based UI - Card, ListView, TimelineTile & Апп-ын хэмжээ native-ээс арай том \\
+\hline
+Performance - native ARM код руу compile & Learning curve - Dart хэл сурах шаардлага \\
+\hline
+Хөгжүүлэлтийн цагийг 40-50\% багасгадаг & \\
+\hline
+\end{tabular}
+\caption{Flutter-ийн давуу болон сул талууд}
+\label{tab:flutter}
+\end{table}
+
+2025 оны байдлаар Flutter 3.38 хувилбартай, 1 сая+ хөгжүүлэгчтэй, кросс-платформ апп-уудын 30\%-ийг эзэлж байна.
+
+\section{Firebase Platform}
+
+Firebase нь Google-ийн cloud-based платформ бөгөөд апп-ын backend (сервергүй) шийдэл өгдөг.
+
+\textbf{Гол функцууд:}
+\begin{itemize}
+	\item \textbf{Firestore/Realtime DB:} Түүхэн өгөгдлийг cloud-д хадгалах, sync хийх
+	\item \textbf{Storage:} Зураг/видео/аудио хадгалах
+	\item \textbf{Authentication:} Биометр + PIN баталгаажуулалт
+	\item \textbf{Cloud Functions:} Sync conflict шийдэх
+	\item \textbf{AI Logic:} ML Kit ашиглан текст таних, recommendation
+\end{itemize}
+
+\section{SQLite Database}
+
+SQLite нь lightweight, embedded relational өгөгдлийн сан бөгөөд мобайл апп-д зориулагдсан, сервер шаардлагагүй.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{9cm}|}
+\hline
+\textbf{Онцлог} & \textbf{Тайлбар} \\
+\hline
+Zero-configuration & Суулгах тохиргоо шаардлагагүй \\
+\hline
+ACID compliant & Найдвартай транзакци баталгаажуулах \\
+\hline
+Small footprint & 500KB library \\
+\hline
+Өргөн хэрэглээ & 1 тэрбум+ төхөөрөмжид суусан \\
+\hline
+\end{tabular}
+\caption{SQLite-ийн онцлог шинж чанарууд}
+\label{tab:sqlite}
+\end{table}
+
+2025 оны байдлаар SQLite файл формат 2050 он хүртэл тогтвортой, Android-ийн албан ёсны guide дагуу ашиглагддаг.

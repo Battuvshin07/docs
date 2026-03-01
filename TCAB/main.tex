@@ -1,0 +1,115 @@
+% \documentclass{Thesis}
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% % XeLaTeX ашиглах учраас inputenc хэрэггүй
+% %\usepackage[utf8]{inputenc}  
+
+\documentclass[12pt, a4paper]{report}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[left=3cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\setlength{\headheight}{14.92621pt}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{fancyhdr}
+
+\setmainfont{Times New Roman}[
+  BoldFont = Times New Roman Bold,
+  ItalicFont = Times New Roman Italic,
+  BoldItalicFont = Times New Roman Bold Italic
+]
+
+\graphicspath{{Pictures}}
+
+\newcommand{\nmct}{{Шинэ Монгол Технологийн Коллеж}}
+\newcommand{\universityname}{{ШИНЭ МОНГОЛ ТЕХНОЛОГИЙН КОЛЛЕЖ}}
+\newcommand{\departmentname}{{КОМПЬЮТЕРИЙН УХААНЫ ТЭНХИМ}}
+\newcommand{\titlename}{{13-р зууны Монголын түүхийг таниулах систем}} 
+\newcommand{\authorsname}{{Наранбаатар БАТТҮВШИН}}
+\newcommand{\authorShort}{{Н.Баттүвшин}}
+\newcommand{\studentID}{{s21c061b}}
+\newcommand{\supervisorname}{{Б.Батчулуун}}
+\newcommand{\cityname}{{Улаанбаатар хот}}
+\newcommand{\gradYear}{{\the\year{} он}}
+
+\renewcommand{\contentsname}{Гарчиг}
+\renewcommand{\chaptername}{Бүлэг}
+\renewcommand{\listtablename}{Хүснэгтийн жагсаалт}
+\renewcommand{\listfigurename}{Зургийн жагсаалт}
+\renewcommand{\tablename}{Хүснэгт}
+\renewcommand{\figurename}{Зураг}
+
+% Зураг болон хүснэгтийн дугаарлалтыг 1-ээс эхлүүлэх
+\renewcommand{\thefigure}{ \arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+
+% Хүснэгтийн caption-ийг доор байрлуулах
+\captionsetup[table]{position=bottom, skip=5pt}
+\captionsetup[figure]{position=bottom, skip=5pt}
+
+\titleformat{\chapter}[hang]
+	{\bfseries\huge}
+	{\chaptername~\thechapter.}
+	{1em}
+	{}
+
+% Хуудасны толгой тохиргоо - бүлгийн нэрийг харуулах
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername~\thechapter.~#1}{}}
+
+% Бүлгийн эхний хуудсанд ч толгой харуулах
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\leftmark}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\begin{document}
+	
+	\input{Chapters/CoverPage}
+	\input{Chapters/AbstractPage.tex}
+	
+	% Ром тоогоор дугаарлах хэсэг эхлэх
+	\pagenumbering{roman}
+	
+	\newpage
+	\singlespacing
+	\tableofcontents
+	\thispagestyle{fancy}												
+	\input{Chapters/Abbreviation.tex}
+	\newpage
+	\singlespacing
+	\listoffigures
+	\thispagestyle{fancy}
+	\newpage
+	\listoftables
+	\thispagestyle{fancy}
+	\input{Chapters/PlanPage.tex}
+	
+	% Араб тоогоор дугаарлах хэсэг эхлэх (Удиртгал-аас)
+	\newpage
+	\pagenumbering{arabic}
+	
+	\input{Chapters/IntroductionPage.tex}
+	\input{Chapters/TheoryPage.tex}
+	\input{Chapters/MethodologyPage.tex}
+	\input{Chapters/ImplementationPage.tex}
+	\input{Chapters/TestingPage.tex}
+	\input{Chapters/ConclusionPage.tex}
+	\input{Chapters/ReferencesPage.tex}
+	
+\end{document}
+
+
+
+
