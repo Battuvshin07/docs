@@ -1,0 +1,1267 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.10.6)  2 MAR 2026 22:12
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Projects/Documents/docs/TCAB/main.tex
+(c:/Projects/Documents/docs/TCAB/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip50
+\multirow@cntb=\count192
+\multirow@dima=\skip51
+\bigstrutjot=\dimen143
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks18
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count196
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count197
+\g__pdf_backend_annotation_int=\count198
+\g__pdf_backend_link_int=\count199
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count266
+\l__fontspec_language_int=\count267
+\l__fontspec_strnum_int=\count268
+\l__fontspec_tmp_int=\count269
+\l__fontspec_tmpa_int=\count270
+\l__fontspec_tmpb_int=\count271
+\l__fontspec_tmpc_int=\count272
+\l__fontspec_em_int=\count273
+\l__fontspec_emdef_int=\count274
+\l__fontspec_strong_int=\count275
+\l__fontspec_strongdef_int=\count276
+\l__fontspec_tmpa_dim=\dimen152
+\l__fontspec_tmpb_dim=\dimen153
+\l__fontspec_tmpc_dim=\dimen154
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box52
+\beforetitleunit=\skip52
+\aftertitleunit=\skip53
+\ttl@plus=\dimen155
+\ttl@minus=\dimen156
+\ttl@toksa=\toks19
+\titlewidth=\dimen157
+\titlewidthlast=\dimen158
+\titlewidthfirst=\dimen159
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count277
+\l__lipsum_a_int=\count278
+\l__lipsum_b_int=\count279
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box53
+\extrarowheight=\dimen161
+\NC@list=\toks20
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box54
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip56
+\f@nch@offset@elh=\skip57
+\f@nch@offset@erh=\skip58
+\f@nch@offset@olh=\skip59
+\f@nch@offset@orh=\skip60
+\f@nch@offset@elf=\skip61
+\f@nch@offset@erf=\skip62
+\f@nch@offset@olf=\skip63
+\f@nch@offset@orf=\skip64
+\f@nch@height=\skip65
+\f@nch@footalignment=\skip66
+\f@nch@widthL=\skip67
+\f@nch@widthC=\skip68
+\f@nch@widthR=\skip69
+\@temptokenb=\toks21
+) (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+
+Package fontspec Info: Could not resolve font "Segoe UI Emoji/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Segoe UI Emoji/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Segoe UI Emoji/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'SegoeUIEmoji(0)' created for font 'Segoe
+(fontspec)             UI Emoji' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Segoe UI
+(fontspec)             Emoji/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX,BoldFont = Times
+(fontspec)             New Roman Bold,ItalicFont = Times New Roman
+(fontspec)             Italic,BoldItalicFont = Times New Roman Bold Italic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New Roman
+(fontspec)             Bold/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New Roman
+(fontspec)             Bold/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New Roman
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New Roman
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman Bold
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New Roman Bold
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
+ (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 79.
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 469.47049pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=469.47049pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=14.92621pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 79.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 79.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 79.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 79.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 79.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 79.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 79.
+LaTeX Font Info:    Redeclaring math accent \check on input line 79.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 79.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 79.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 79.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 79.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 79.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 79.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 79.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 79.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 79.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(Chapters/CoverPage.tex
+File: Pictures/NMCT.png Graphic file (type bmp)
+<Pictures/NMCT.png>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (C:\Users\battu\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (41.57523pt too wide) in paragraph at lines 20--24
+[][] 
+ []
+
+[1
+
+]
+Overfull \hbox (18.0pt too wide) in paragraph at lines 47--57
+[]$[]$ 
+ []
+
+) (Chapters/AbstractPage.tex [2]) [1] (main.toc [2
+
+] [3])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ (Chapters/Abbreviation.tex [4]) [5] (main.lof)
+\tf@lof=\write4
+\openout4 = `main.lof'.
+
+ [6
+
+] (main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ (Chapters/PlanPage.tex [7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\TU/TimesNewRoman(0)/b/n/10.95 Эхлэх
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\TU/TimesNewRoman(0)/b/n/10.95 Дуусах
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Сэдэв, удирдагч
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\TU/TimesNewRoman(0)/m/n/10.95 багш, зорилго,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+\TU/TimesNewRoman(0)/m/n/10.95 зорилт
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 17--17
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Түүхийн эх сурвалж цуглуулах,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\TU/TimesNewRoman(0)/m/n/10.95 судалгааны тойм, онолын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Монголын нууц
+ []
+
+
+Underfull \hbox (badness 1242) in paragraph at lines 19--19
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Судалгааны төлөвлөгөө, апп-ын
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 21--21
+[]|\TU/TimesNewRoman(0)/m/n/10.95 SQLite өгөгдлийн
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 25--25
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Програмчлалын орчин бэлтгэх,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Хөгжүүлэлтийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\TU/TimesNewRoman(0)/m/n/10.95 орчин, үндсэн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Интерактив элемент, цагийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Газрын зураг,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Зураг, видео,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Апп-ын туршилт, оффлайн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\TU/TimesNewRoman(0)/m/n/10.95 дэмжлэг, аюулгүй байдал
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Unit тест,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\TU/TimesNewRoman(0)/m/n/10.95 оффлайн,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Хэрэглэгчийн интерфейс
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\TU/TimesNewRoman(0)/m/n/10.95 UI сайжруулалт,
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 37--37
+[]|\TU/TimesNewRoman(0)/m/n/10.95 ТСА Үзлэг 2: Апп-ын демо
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Туршилтын үр дүнг дүн
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 39--39
+\TU/TimesNewRoman(0)/m/n/10.95 шинжилгээ хийх, апп-ын алдаа
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Дүн шинжилгээ,
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 41--41
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Баримт бичиг шинэчлэх, гарын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Баримт бичиг,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\TU/TimesNewRoman(0)/m/n/10.95 урьдчилсан
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Эцсийн тайлан боловсруулах,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\TU/TimesNewRoman(0)/m/n/10.95 Эцсийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\TU/TimesNewRoman(0)/m/n/10.95 тайлан, үндсэн
+ []
+
+
+Overfull \hbox (12.2039pt too wide) in paragraph at lines 11--46
+ [][] 
+ []
+
+) [8] (Chapters/IntroductionPage.tex
+Бүлэг 1.
+
+Overfull \hbox (27.48654pt too wide) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(0)/m/n/12 Монголын түүх нь дэлхийн түүхэнд онцгой байр суурь эзэлдэг хэр нь залуучуудад ойлгомжтой,
+ []
+
+
+Overfull \hbox (32.07407pt too wide) in paragraph at lines 11--12
+\TU/TimesNewRoman(0)/m/n/12 хэл дээрх боловсролын апп-ууд цөөн, контентын чанар болон интерактив байдал сул, хэрэглэгчдийг
+ []
+
+
+Overfull \hbox (6.84476pt too wide) in paragraph at lines 13--14
+[]\TU/TimesNewRoman(0)/m/n/12 Тиймээс энэхүү төсөл нь зөвхөн нэгэн апп бүтээх зорилготой бус, харин Монголын түүхийг
+ []
+
+
+Overfull \hbox (20.70883pt too wide) in paragraph at lines 13--14
+\TU/TimesNewRoman(0)/m/n/12 орчин үеийн технологийн шийдлээр баяжуулж, залуу үедээ хүртээмжтэй, сонирхолтой хэлбэрээр
+ []
+
+
+Overfull \hbox (3.38968pt too wide) in paragraph at lines 15--16
+[]\TU/TimesNewRoman(0)/m/n/12 Ингэснээр уг систем нь боловсролын салбарт дижитал шинэчлэл хийх, Монголын түүхийг
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\TU/TimesNewRoman(0)/m/n/12 Байлдан дагуулалтын
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 47--48
+[]|\TU/TimesNewRoman(0)/m/n/12 Интерактив газрын зураг, зум хийх,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+[]|\TU/TimesNewRoman(0)/m/n/12 Үйл явдлуудыг цаг хугацаагаар
+ []
+
+) (Chapters/TheoryPage.tex
+Overfull \hbox (29.68752pt too wide) in paragraph at lines 71--2
+[]\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгчид нь Монгол хэл мэдэх, Android эсвэл iOS мобайл төхөөрөмжтэй байх шаардлагатай.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--2
+
+ []
+
+[2]
+Бүлэг 2.
+
+Overfull \hbox (18.2385pt too wide) in paragraph at lines 12--13
+\TU/TimesNewRoman(0)/m/n/12 хүртээмжтэй байдлаар хүргэхэд чиглэдэг бөгөөд constructivism (бүтээгдэхүйн онол)-ын зарчмаар
+ []
+
+
+Overfull \hbox (4.59085pt too wide) in paragraph at lines 16--17
+[]\TU/TimesNewRoman(0)/m/n/12 Mobile learning онол нь мобайл төхөөрөмжийн давуу талыг (оффлайн ажиллах, интерактив
+ []
+
+
+Overfull \hbox (3.00803pt too wide) in paragraph at lines 25--26
+[]\TU/TimesNewRoman(0)/m/n/12 Онолын хүрээнд апп хөгжүүлэлт нь Software Development Life Cycle (SDLC)-ийн загварыг
+ []
+
+
+Overfull \hbox (2.94162pt too wide) in paragraph at lines 39--40
+[]\TU/TimesNewRoman(0)/m/n/12 Өгөгдлийн сангийн онол нь relational database model (хүснэгтүүдийн хоорондын харилцаа:
+ []
+
+
+Overfull \hbox (5.84244pt too wide) in paragraph at lines 39--40
+\TU/TimesNewRoman(0)/m/n/12 one-to-many, жишээ: Person → Event) ашиглаж, өгөгдлийг үр дүнтэй хадгалах, авахад чиглэдэг. 
+ []
+
+[3
+
+]
+Underfull \hbox (badness 7613) in paragraph at lines 55--56
+[]|\TU/TimesNewRoman(0)/m/n/12 Retention-ийг 30-40% нэмэгдүүлдэг (Duolingo,
+ []
+
+
+Overfull \hbox (8.78891pt too wide) in paragraph at lines 70--71
+\TU/TimesNewRoman(0)/m/n/12 апп-ууд (Ulger, Mongolian Script Apps) цөөн, ихэвчлэн статик контенттэй байгаа тул интерактив
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+[]|\TU/TimesNewRoman(0)/m/n/12 Learning curve - Dart хэл сурах
+ []
+
+
+Underfull \hbox (badness 4913) in paragraph at lines 88--88
+[]|\TU/TimesNewRoman(0)/m/n/12 Хөгжүүлэлтийн цагийг 40-50%
+ []
+
+[4]
+Overfull \hbox (8.61038pt too wide) in paragraph at lines 112--113
+[]\TU/TimesNewRoman(0)/m/n/12 SQLite нь lightweight, embedded relational өгөгдлийн сан бөгөөд мобайл апп-д зориулагдсан,
+ []
+
+) (Chapters/MethodologyPage.tex [5]
+Бүлэг 3.
+
+Overfull \hbox (3.98068pt too wide) in paragraph at lines 7--8
+\TU/TimesNewRoman(0)/m/n/12 үндэс болох бөгөөд энэ нь програм хангамжийн хөгжүүлэлтийн амьдралын мөчлөгийн (SDLC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\TU/TimesNewRoman(0)/m/n/12 Судалгаа ба
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]|\TU/TimesNewRoman(0)/m/n/12 SRS баримт бичиг боловсруулах,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+\TU/TimesNewRoman(0)/m/n/12 функционал болон функционал бус
+ []
+
+[6
+
+]
+Overfull \hbox (6.05165pt too wide) in paragraph at lines 62--63
+[]\TU/TimesNewRoman(0)/m/n/12 Өгөгдлийн сан нь relational байх бөгөөд түүхэн өгөгдлийг хадгалахад зориулагдсан. SQLite
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\TU/TimesNewRoman(0)/m/n/12 person_id (PK), name, birth_date,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+[]|\TU/TimesNewRoman(0)/m/n/12 Түүхэн хүмүүсийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+[]|\TU/TimesNewRoman(0)/m/n/12 Газрын зургийн
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 76--76
+[]|\TU/TimesNewRoman(0)/m/n/12 quiz_id (PK), question, answers, cor-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+[]|\TU/TimesNewRoman(0)/m/n/12 Мультимедиа
+ []
+
+[7]
+File: Pictures/use_case.png Graphic file (type bmp)
+<Pictures/use_case.png>
+ [8]
+File: Pictures/sequence_diagram.png Graphic file (type bmp)
+<Pictures/sequence_diagram.png>
+File: Pictures/system_diagram.png Graphic file (type bmp)
+<Pictures/system_diagram.png>
+ [9]
+File: Pictures/er_diagram.png Graphic file (type bmp)
+<Pictures/er_diagram.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+[]|\TU/TimesNewRoman(0)/m/n/12 Кросс-платформ UI
+ []
+
+) (Chapters/ImplementationPage.tex [10]
+Бүлэг 4.
+
+Overfull \hbox (23.29709pt too wide) in paragraph at lines 5--6
+[]\TU/TimesNewRoman(0)/m/n/12 Энэхүү бүлэгт 13-р зууны Монголын түүхийг таниулах мобайл аппликейшний хөгжүүлэлтийн
+ []
+
+
+Overfull \hbox (11.80751pt too wide) in paragraph at lines 5--6
+\TU/TimesNewRoman(0)/m/n/12 үйл явцыг дэлгэрэнгүй тайлбарлана. Аппын эх код нь Flutter фреймворкийн дагуу бүтэцлэгдсэн
+ []
+
+
+Overfull \hbox (1.22366pt too wide) in paragraph at lines 11--12
+[]\TU/TimesNewRoman(0)/m/n/12 Аппыг хөгжүүлэхэд ашигласан үндсэн орчин, хэрэгслүүдийн мэдээллийг доорх хүснэгтэд
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[]|\TU/TimesNewRoman(0)/m/n/12 Cloud синхрончлол,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+[]|\TU/TimesNewRoman(0)/m/n/12 Хувилбарын удирдлага (Version
+ []
+
+
+Overfull \hbox (13.63678pt too wide) in paragraph at lines 38--39
+[]\TU/TimesNewRoman(0)/m/n/12 Төслийн \TU/lmtt/m/n/12 pubspec.yaml \TU/TimesNewRoman(0)/m/n/12 тохиргооны файлд зарласан гол хамаарлуудыг (dependencies) дараах
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 50--51
+[]|\TU/TimesNewRoman(0)/m/n/12 Төлөвийн удирдлага (State Manage-
+ []
+
+
+Overfull \hbox (3.60898pt too wide) in paragraph at lines 54--54
+[]|\TU/lmtt/m/n/12 flutter_earth_globe| 
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 87--88
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON өгөгдлийн файлууд (persons, events, maps,
+ []
+
+[11
+
+]
+Overfull \hbox (26.4581pt too wide) in paragraph at lines 102--103
+[]\TU/lmtt/m/n/12 main.dart \TU/TimesNewRoman(0)/m/n/12 файл нь аппын эхлэл цэг (entry point) бөгөөд дараах үндсэн үүргүүдийг гүйцэтгэдэг: 
+ []
+
+
+Overfull \hbox (26.07022pt too wide) in paragraph at lines 105--106
+[]\TU/TimesNewRoman(0)/b/n/12 Firebase эхлүүлэлт: \TU/lmtt/m/n/12 Firebase.initializeApp() \TU/TimesNewRoman(0)/m/n/12 функцээр Firebase платформыг ачааллаж,
+ []
+
+
+Overfull \hbox (2.03749pt too wide) in paragraph at lines 106--107
+[]\TU/TimesNewRoman(0)/b/n/12 Provider бүртгэл: \TU/lmtt/m/n/12 MultiProvider \TU/TimesNewRoman(0)/m/n/12 ашиглан \TU/lmtt/m/n/12 InsightService \TU/TimesNewRoman(0)/m/n/12 болон \TU/lmtt/m/n/12 AppProvider \TU/TimesNewRoman(0)/m/n/12 гэсэн
+ []
+
+
+Overfull \hbox (15.11429pt too wide) in paragraph at lines 107--108
+[]\TU/TimesNewRoman(0)/b/n/12 MaterialApp тохиргоо: \TU/TimesNewRoman(0)/m/n/12 Google Fonts (Inter) шрифт, цагаан суурь өнгө бүхий загварчлалыг
+ []
+
+
+Overfull \hbox (7.39008pt too wide) in paragraph at lines 110--111
+[]\TU/lmtt/m/n/12 HomeScreen \TU/TimesNewRoman(0)/m/n/12 нь \TU/lmtt/m/n/12 StatefulWidget \TU/TimesNewRoman(0)/m/n/12 бөгөөд \TU/lmtt/m/n/12 initState() \TU/TimesNewRoman(0)/m/n/12 дотор \TU/lmtt/m/n/12 AppProvider.loadAllData()
+ []
+
+
+Overfull \hbox (6.90797pt too wide) in paragraph at lines 125--126
+[]\TU/TimesNewRoman(0)/m/n/12 Аппын өгөгдлийн давхарга нь 6 загвар класс (Model)-аас бүрдэнэ. Загвар бүр нь \TU/lmtt/m/n/12 fromMap()
+ []
+
+[12]
+Overfull \hbox (5.55261pt too wide) in paragraph at lines 181--182
+[]\TU/TimesNewRoman(0)/m/n/12 Мэдлэг шалгах квиз асуултуудыг хадгалах загвар. Хариултууд нь JSON форматтай тэмдэгт
+ []
+
+[13]
+Overfull \hbox (16.65451pt too wide) in paragraph at lines 256--257
+[]\TU/TimesNewRoman(0)/m/n/12 Монголын эзэнт гүрний нутаг дэвсгэрийн хил хязгаар болон байлдан дагуулалтын цэгүүдийг
+ []
+
+
+Overfull \hbox (12.58765pt too wide) in paragraph at lines 275--276
+[]\TU/lmtt/m/n/12 DataService \TU/TimesNewRoman(0)/m/n/12 нь аппын гол өгөгдлийн үйлчилгээ бөгөөд \TU/TimesNewRoman(0)/b/n/12 Singleton загвар \TU/TimesNewRoman(0)/m/n/12 (Singleton Pattern)-
+ []
+
+
+Overfull \hbox (48.12196pt too wide) in paragraph at lines 275--276
+\TU/TimesNewRoman(0)/m/n/12 аар хэрэгжүүлэгдсэн. Энэ нь аппын хаанаас ч ижил нэг жишээ (instance) рүү хандахыг баталгаажуулна. 
+ []
+
+
+Overfull \hbox (33.96391pt too wide) in paragraph at lines 280--281
+[]\TU/TimesNewRoman(0)/b/n/12 Оффлайн эхлэл (Offline-first): \TU/TimesNewRoman(0)/m/n/12 Бүх өгөгдлийг \TU/lmtt/m/n/12 assets/data/ \TU/TimesNewRoman(0)/m/n/12 хавтас доторх JSON файлуудаас
+ []
+
+
+Overfull \hbox (2.96875pt too wide) in paragraph at lines 281--282
+[]\TU/TimesNewRoman(0)/b/n/12 Зэрэгцээ ачаалал: \TU/lmtt/m/n/12 Future.wait() \TU/TimesNewRoman(0)/m/n/12 ашиглан 5 төрлийн өгөгдлийг (persons, events, maps,
+ []
+
+[14]
+Overfull \hbox (7.34091pt too wide) in paragraph at lines 282--283
+[]\TU/TimesNewRoman(0)/b/n/12 Нэг удаагийн ачаалал: \TU/lmtt/m/n/12 _isLoaded \TU/TimesNewRoman(0)/m/n/12 туг (flag) ашиглан давтан дуудахад дахин ачаалахгүй
+ []
+
+
+Overfull \hbox (4.06078pt too wide) in paragraph at lines 283--284
+[]\TU/TimesNewRoman(0)/b/n/12 Хайлтын функц: \TU/lmtt/m/n/12 searchPersons() \TU/TimesNewRoman(0)/m/n/12 — нэрээр хайх, \TU/lmtt/m/n/12 getEventsForPerson() \TU/TimesNewRoman(0)/m/n/12 — хүнтэй
+ []
+
+
+Overfull \hbox (24.54251pt too wide) in paragraph at lines 286--287
+[]\TU/TimesNewRoman(0)/m/n/12 JSON файл тус бүрийг \TU/lmtt/m/n/12 rootBundle.loadString() \TU/TimesNewRoman(0)/m/n/12 ашиглан уншиж, \TU/lmtt/m/n/12 json.decode() \TU/TimesNewRoman(0)/m/n/12 функцээр
+ []
+
+
+Overfull \hbox (12.25023pt too wide) in paragraph at lines 302--303
+[]\TU/TimesNewRoman(0)/m/n/12 Ачаалж буй төлөвийг \TU/lmtt/m/n/12 _isLoading \TU/TimesNewRoman(0)/m/n/12 хувьсагчаар удирдаж, UI-д ачаалж буй анимаци харуулна. 
+ []
+
+
+Overfull \hbox (0.8024pt too wide) in paragraph at lines 317--318
+[]\TU/TimesNewRoman(0)/b/n/12 Навигацийн төлөв: \TU/lmtt/m/n/12 _selectedNavIndex \TU/TimesNewRoman(0)/m/n/12 — доод навигацийн идэвхтэй цэсийг хянана. 
+ []
+
+[15]
+Overfull \hbox (5.16353pt too wide) in paragraph at lines 346--347
+[]\TU/lmtt/m/n/12 AppProvider \TU/TimesNewRoman(0)/m/n/12 — \TU/lmtt/m/n/12 DataService.loadAll() \TU/TimesNewRoman(0)/m/n/12 ашиглан JSON өгөгдлүүдийг зэрэг ачааллана. 
+ []
+
+
+Overfull \hbox (23.50491pt too wide) in paragraph at lines 347--348
+[]\TU/TimesNewRoman(0)/m/n/12 Ачаалал дуусмагц \TU/lmtt/m/n/12 notifyListeners() \TU/TimesNewRoman(0)/m/n/12 дуудагдаж, бүх \TU/lmtt/m/n/12 Consumer \TU/TimesNewRoman(0)/m/n/12 виджетүүд шинэчлэгдэнэ. 
+ []
+
+
+Overfull \hbox (14.08685pt too wide) in paragraph at lines 348--349
+[]\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгч дэлгэцүүд хооронд шилжихэд \TU/lmtt/m/n/12 Consumer<AppProvider> \TU/TimesNewRoman(0)/m/n/12 ашиглан шаардлагатай
+ []
+
+
+Overfull \hbox (29.15553pt too wide) in paragraph at lines 364--365
+[]\TU/TimesNewRoman(0)/b/n/12 HistoryInsightCard: \TU/lmtt/m/n/12 InsightService\TU/TimesNewRoman(0)/m/n/12 -ээс авсан түүхийн сонирхолтой мэдээллийг \TU/lmtt/m/n/12 Consumer
+ []
+
+[16]
+Overfull \hbox (63.12897pt too wide) in paragraph at lines 372--373
+[]\TU/TimesNewRoman(0)/b/n/12 Жагсаалт горим: \TU/lmtt/m/n/12 Consumer<AppProvider> \TU/TimesNewRoman(0)/m/n/12 ашиглан бүх хүмүүсийн жагсаалтыг \TU/lmtt/m/n/12 ListView.builder\TU/TimesNewRoman(0)/m/n/12 -
+ []
+
+
+Overfull \hbox (3.97983pt too wide) in paragraph at lines 374--375
+[]\TU/TimesNewRoman(0)/b/n/12 Гэр бүлийн мод горим (FR-06): \TU/lmtt/m/n/12 FamilyTreeScreen \TU/TimesNewRoman(0)/m/n/12 нь 3 үеийг (generation) модон бүтцээр
+ []
+
+
+Overfull \hbox (2.90024pt too wide) in paragraph at lines 385--386
+\TU/TimesNewRoman(0)/m/n/12 барсан огноо, намтар текст, мөн тухайн хүнтэй холбоотой үйл явдлуудын жагсаалтыг агуулна.
+ []
+
+
+Overfull \hbox (11.95053pt too wide) in paragraph at lines 385--386
+\TU/lmtt/m/n/12 Consumer<AppProvider> \TU/TimesNewRoman(0)/m/n/12 ашиглан \TU/lmtt/m/n/12 getEventsForPerson() \TU/TimesNewRoman(0)/m/n/12 функцээр холбоотой үйл явдлуудыг
+ []
+
+
+Overfull \hbox (24.45602pt too wide) in paragraph at lines 405--406
+[]\TU/lmtt/m/n/12 flutter_earth_globe \TU/TimesNewRoman(0)/m/n/12 санг ашиглан бодит дэлхийн бөмбөрцгийг харуулна. Үндсэн тохиргоо: 
+ []
+
+[17]
+Overfull \hbox (5.47247pt too wide) in paragraph at lines 418--419
+[]\TU/TimesNewRoman(0)/b/n/12 Эзэнт гүрний хил: \TU/lmtt/m/n/12 EmpireTerritory.boundaryCoords \TU/TimesNewRoman(0)/m/n/12 ашиглан 35+ шулуун шугамаар
+ []
+
+
+Overfull \hbox (10.52603pt too wide) in paragraph at lines 419--420
+[]\TU/TimesNewRoman(0)/b/n/12 Байлдан дагуулалтын маркерууд: \TU/TimesNewRoman(0)/m/n/12 6 гол хотыг (Харахорум, Бээжин, Самарканд, Багдад,
+ []
+
+
+Overfull \hbox (26.27985pt too wide) in paragraph at lines 451--452
+[]\TU/TimesNewRoman(0)/m/n/12 Квиз эхлэхэд \TU/lmtt/m/n/12 AppProvider\TU/TimesNewRoman(0)/m/n/12 -ээс бүх асуултыг авч, санамсаргүйгээр хольж (shuffle) эрэмбэлнэ. 
+ []
+
+[18]
+Overfull \hbox (78.92424pt too wide) in paragraph at lines 470--471
+[]\TU/TimesNewRoman(0)/m/n/12 13-р зууны Монголын соёл, нийгмийн амьдралын мэдээллийг харуулах дэлгэц. \TU/lmtt/m/n/12 Consumer<AppProvider>
+ []
+
+
+Overfull \hbox (49.77927pt too wide) in paragraph at lines 517--518
+[]\TU/TimesNewRoman(0)/m/n/12 Сонгогдсон цэс нь улаан өнгөтэй (\TU/lmtt/m/n/12 #D94B2B\TU/TimesNewRoman(0)/m/n/12 ), бусад нь саарал өнгөтэй харагдана. \TU/lmtt/m/n/12 Navigator.push()
+ []
+
+
+Overfull \hbox (10.34212pt too wide) in paragraph at lines 521--522
+\TU/lmtt/m/n/12 AnimationController \TU/TimesNewRoman(0)/m/n/12 ашиглан дарах үед жижгэрэх анимациар (scale 1.0 $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 0.92) хэрэглэгчийн
+ []
+
+
+Overfull \hbox (18.58994pt too wide) in paragraph at lines 521--522
+\TU/TimesNewRoman(0)/m/n/12 хариу үйлдлийг сайжруулна. \TU/lmtt/m/n/12 isSelected \TU/TimesNewRoman(0)/m/n/12 параметр ашиглан алтан өнгийн хүрээгээр тэмдэглэнэ. 
+ []
+
+[19]
+Overfull \hbox (9.00146pt too wide) in paragraph at lines 525--526
+[]\TU/TimesNewRoman(0)/m/n/12 Гэр бүлийн модонд хүний зангилаа дарахад гарч ирэх \TU/lmtt/m/n/12 FadeTransition \TU/TimesNewRoman(0)/m/n/12 + \TU/lmtt/m/n/12 ScaleTransition
+ []
+
+
+Overfull \hbox (10.60466pt too wide) in paragraph at lines 531--532
+[]\TU/TimesNewRoman(0)/m/n/12 Апп нь Firebase платформтой интеграцлагдсан бөгөөд \TU/lmtt/m/n/12 firebase_core \TU/TimesNewRoman(0)/m/n/12 ба \TU/lmtt/m/n/12 cloud_firestore
+ []
+
+
+Overfull \hbox (4.14pt too wide) in paragraph at lines 535--536
+[]\TU/lmtt/m/n/12 main() \TU/TimesNewRoman(0)/m/n/12 функцэд \TU/lmtt/m/n/12 Firebase.initializeApp() \TU/TimesNewRoman(0)/m/n/12 дуудагдаж, \TU/lmtt/m/n/12 firebase_options.dart \TU/TimesNewRoman(0)/m/n/12 файлд
+ []
+
+
+Overfull \hbox (21.68771pt too wide) in paragraph at lines 539--540
+[]\TU/TimesNewRoman(0)/m/n/12 Одоогийн хэрэгжүүлэлтэд Firestore-ыг ирээдүйн онлайн синхрончлолд ашиглахаар бэлтгэсэн.
+ []
+
+
+Overfull \hbox (12.14131pt too wide) in paragraph at lines 539--540
+\TU/lmtt/m/n/12 InsightService \TU/TimesNewRoman(0)/m/n/12 дотор Firestore-оос өгөгдөл татах жишээ код (comment хэлбэрээр) бэлтгэгдсэн.
+ []
+
+
+Overfull \hbox (18.12521pt too wide) in paragraph at lines 555--556
+[]\TU/TimesNewRoman(0)/m/n/12 Аппын хэрэглэгчийн интерфейс нь 13-р зууны Монголын түүхийн уур амьсгалыг илэрхийлэх
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--567
+[]|\TU/TimesNewRoman(0)/m/n/12 Бамбай (Parch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--575
+[]|\TU/TimesNewRoman(0)/m/n/12 Эзэнт гүрний
+ []
+
+[20]) (Chapters/TestingPage.tex [21]
+Бүлэг 5.
+
+Overfull \hbox (23.46664pt too wide) in paragraph at lines 5--6
+[]\TU/TimesNewRoman(0)/m/n/12 Энэхүү бүлэгт аппын туршилтын арга зүй, туршилтын үр дүн, мөн хэлэлцүүлгийг дэлгэрэнгүй
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\TU/TimesNewRoman(0)/m/n/12 Нэгж туршилт
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\TU/TimesNewRoman(0)/m/n/12 Интеграцийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+\TU/TimesNewRoman(0)/m/n/12 туршилт (Integra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[]|\TU/TimesNewRoman(0)/m/n/12 Дэлгэц хоорондын
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\TU/TimesNewRoman(0)/m/n/12 Ашиглалтын
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 23--23
+\TU/TimesNewRoman(0)/m/n/12 туршилт (Usability
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\TU/TimesNewRoman(0)/m/n/12 Хэрэглэгчийн санал
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[]|\TU/TimesNewRoman(0)/m/n/12 UI/UX хэрэглэгчийн
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 46--46
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 Person
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 48--48
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 50--50
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[]|\TU/TimesNewRoman(0)/m/n/12 Шинэ нэртэй
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 52--52
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 Event
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 54--54
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 Quiz
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 56--56
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 56--57
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 MapData
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 58--58
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+[]|\TU/TimesNewRoman(0)/m/n/12 JSON $\OMS/cmsy/m/n/12 !$ \TU/TimesNewRoman(0)/m/n/12 Media
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 75--76
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+[]|\TU/TimesNewRoman(0)/m/n/12 Чингис
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+[]|\TU/TimesNewRoman(0)/m/n/12 3+ үйл
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]|\TU/TimesNewRoman(0)/m/n/12 Түүхэн хүмүүсийн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+[]|\TU/TimesNewRoman(0)/m/n/12 Хүний жагсаалт,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--102
+\TU/TimesNewRoman(0)/m/n/12 дэлгэрэнгүй мэдээлэл
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 102--103
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 104--104
+[]|\TU/TimesNewRoman(0)/m/n/12 3D бөмбөрцөг, 2D зураг,
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 104--105
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]|\TU/TimesNewRoman(0)/m/n/12 Үйл явдлын огноогоор
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\TU/TimesNewRoman(0)/m/n/12 эрэмбэлэлт, хүн рүү
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 106--107
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
+[]|\TU/TimesNewRoman(0)/m/n/12 Хариулт сонгох, оноо
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 108--109
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 7326) in paragraph at lines 110--110
+[]|\TU/TimesNewRoman(0)/m/n/12 Зураг харуулах, карусель
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 110--111
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 112--113
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]|\TU/TimesNewRoman(0)/m/n/12 Жагсаалт, дэлгэрэнгүй
+ []
+
+
+Overfull \hbox (2.43825pt too wide) in paragraph at lines 114--115
+[]|\TU/TimesNewRoman(0)/m/n/12 Амжилттай| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]|\TU/TimesNewRoman(0)/m/n/12 Дэлгэц хоорондын
+ []
+
+[22
+
+] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+[]|\TU/TimesNewRoman(0)/m/n/12 Ихэнх функцийг хялархан
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]|\TU/TimesNewRoman(0)/m/n/12 Түүхийн уур амьсгал сайн
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]|\TU/TimesNewRoman(0)/m/n/12 Квизийн сонирхол татах
+ []
+
+[24]
+Overfull \hbox (6.38747pt too wide) in paragraph at lines 226--226
+[]|\TU/TimesNewRoman(0)/m/n/12 Гүйцэтгэсэн| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
+[]|\TU/TimesNewRoman(0)/m/n/12 Шаардлага, дизайн
+ []
+
+
+Overfull \hbox (6.38747pt too wide) in paragraph at lines 228--228
+[]|\TU/TimesNewRoman(0)/m/n/12 Гүйцэтгэсэн| 
+ []
+
+
+Overfull \hbox (6.38747pt too wide) in paragraph at lines 230--230
+[]|\TU/TimesNewRoman(0)/m/n/12 Гүйцэтгэсэн| 
+ []
+
+
+Overfull \hbox (6.38747pt too wide) in paragraph at lines 234--234
+[]|\TU/TimesNewRoman(0)/m/n/12 Гүйцэтгэсэн| 
+ []
+
+
+Overfull \hbox (6.38747pt too wide) in paragraph at lines 236--236
+[]|\TU/TimesNewRoman(0)/m/n/12 Гүйцэтгэсэн| 
+ []
+
+
+Overfull \hbox (5.15451pt too wide) in paragraph at lines 256--257
+[]\TU/TimesNewRoman(0)/m/n/12 Онлайн синхрончлол бүрэн хэрэгжүүлэгдээгүй (Firebase бэлтгэсэн ч одоогоор оффлайн) 
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 268--268
+[]|\TU/TimesNewRoman(0)/b/n/12 Khan
+ []
+
+) [26] (main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 7322 strings out of 409617
+ 172778 string characters out of 5774013
+ 1942191 words of memory out of 5000000
+ 29296 multiletter control sequences out of 15000+600000
+ 564462 words of font info for 85 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 79i,12n,93p,594b,382s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (36 pages).
